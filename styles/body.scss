@@ -1,8 +1,26 @@
 .taskbox {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 1.5em;
+  margin-left: 5em;
+  margin-right: 5em;
+  border: solid black 1px;
+  padding: 2em;
   padding-left: 3em;
   padding-right: 3em;
   font-family: 'Roboto', sans-serif;
+}
+
+.task-icon {
+  display:flex;
+  margin:1em;
+}
+.task {
+  display:flex;
+  margin:1em
+}
+
+.task-options {
+  display: flex;
+  margin:1em
 }
