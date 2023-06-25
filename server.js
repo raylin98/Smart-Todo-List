@@ -10,6 +10,7 @@ const cookieSession = require("cookie-session");
 
 const PORT = process.env.PORT || 8080;
 const app = express();
+const router = express.Router()
 
 app.set('view engine', 'ejs');
 // Configure cookie-session middleware
@@ -57,6 +58,10 @@ app.use('/users', usersRoutes);
 app.get('/', (req, res) => {
   res.render('index');
 });
+
+app.get('/register', (req, res) => {
+  res.render('user-register.ejs')
+})
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

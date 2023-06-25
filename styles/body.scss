@@ -34,6 +34,18 @@
   font-weight:500;
 }
 
+.first-name {
+  display: flex;
+  justify-content: center;
+  margin-top:1em;
+}
+
+.last-name {
+  display: flex;
+  justify-content: center;
+  margin-top:1em;
+}
+
 .e-mail {
   display: flex;
   justify-content: center;
