@@ -1,8 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Home Page</title>
+  <!-- Nav CSS-->
+  <link rel="stylesheet" href="styles/nav.css" type="text/css" />
+
+  <!-- Body CSS-->
+  <link rel="stylesheet" href="styles/body.css" type="text/css"/>
+
+  <!-- Button CSS-->
+  <link rel="stylesheet" href="styles/button.css" type="text/css"/>
+
+  <!-- Google Roboto Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+   <!-- Font Awesome Lib CDN-->
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+   integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+ />
+
 
   <meta charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -18,7 +40,33 @@
 </head>
 
 <body>
-  <h1>Have fun! 🥔</h1>
-</body>
+  <nav>
+    <div class="header">
+      <span class='logo'>Smart Todo List</span>
+      <div class="user-select">
+        <span class="login">Login </span>
+        <span class="register">Register</span>
+      </div>
+    </div>
+  </nav>
 
+
+<main class="container">
+  <div class="buttons">
+    <button type="button" i class="fa-regular fa-flag"></button>
+    <button type="button" i class="fa-solid fa-utensils"></button>
+    <button type="button" i class="fa-solid fa-video"></button>
+    <button type="button" i class="fa-solid fa-book"></button>
+    <button type="button" i class="fa-solid fa-shopping-cart"></button>
+  </div>
+
+  <section>
+    <div class="taskbox">
+        <div class="task-icon">icons</div>
+        <div class="task">task</div>
+        <div class="task-options">task-options</div>
+    </div>
+  </section>
+  </main>
+</body>
 </html>

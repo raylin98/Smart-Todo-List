@@ -1,0 +1,25 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #ffffff;
+  color:#000000;
+  display: flex;
+  padding:1em;
+  border-bottom: 1px solid #000000;
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+}
+
+body {
+  border-bottom:black
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+.login{
+  padding:1em;
+}
