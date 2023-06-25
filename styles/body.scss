@@ -24,3 +24,51 @@
   display: flex;
   margin:1em
 }
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  padding: 5em;
+  font-family: 'Roboto', sans-serif;
+  font-weight:500;
+}
+
+.e-mail {
+  display: flex;
+  justify-content: center;
+  margin-top:1em;
+  /* border-left:transparent;
+  border-top:transparent;
+  border-right:transparent; */
+}
+
+.pw {
+  display: flex;
+  justify-content: center;
+  margin-top:1em;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top:2em;
+}
+
+
+
+@media only screen and (min-width:992px) {
+  .container {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+
+  .form-class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+
+  }
+}
