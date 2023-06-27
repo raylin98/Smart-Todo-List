@@ -11,4 +11,6 @@
     border: white;
   }
 
-
+.fa-flag:hover, .fa-utensils:hover, .fa-video:hover, .fa-book:hover, .fa-shopping-cart:hover {
+  box-shadow: 3px 3px 3px rgba(41, 41, 45, 0.2);
+}

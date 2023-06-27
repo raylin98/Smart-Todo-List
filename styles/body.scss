@@ -2,14 +2,15 @@
   display: flex;
   justify-content: space-around;
   margin-top: 1.5em;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 1em;
+  margin-right: 1em;
   border: solid black 1px;
   padding: 2em;
   padding-left: 3em;
   padding-right: 3em;
   font-family: 'Roboto', sans-serif;
 }
+
 
 .task-icon {
   display:flex;
@@ -67,6 +68,22 @@
   margin-top:2em;
 }
 
+#fetch-users {
+  margin-top:1em;
+}
+
+.task-input {
+  display:flex;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 @media only screen and (min-width:992px) {
@@ -83,4 +100,48 @@
     width:50%;
 
   }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .taskbox {
+    display: flex;
+    width:90%
+  }
+
+  .task-input {
+  display:flex;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .box-1, .box-2, .box-3, .box-4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+
+  .taskbox {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    border: solid black 1px;
+    padding: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    font-family: 'Roboto', sans-serif;
+  }
+}
 }

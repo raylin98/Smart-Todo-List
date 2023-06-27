@@ -46,36 +46,22 @@
       <div class="user-select">
         <span class="user">USER</span>
       </div>
-
     </div>
   </nav>
 
+  <main class="container">
+    <section class="form-class">
+    <form class="form-inline " action ="/users" method="POST">
 
-<main class="container">
-  <div class="buttons">
-    <button type="button" i class="fa-regular fa-flag"></button>
-    <button type="button" i class="fa-solid fa-utensils"></button>
-    <button type="button" i class="fa-solid fa-video"></button>
-    <button type="button" i class="fa-solid fa-book"></button>
-    <button type="button" i class="fa-solid fa-shopping-cart"></button>
-  </div>
-  <div class="taskbox">
-    <div class="box-1"> Categories
-      <span> Tasks</span>
-    </div>
+      <div class="form-group mb-2 forms">
+        <label for="task" class="add-task"> Add task</label>
+          <input class="task-input" type="task" name="task" placeholder="Enter task">
+          <button type="submit" name="Submit">Submit</button>
+      </div>
 
-    <div class="box-2"> Descriptions
-      <span> description</span>
-    </div>
+    </form>
 
-    <div class="box-3"> Icons
-      <span> description</span>
-    </div>
-<!--     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
- -->  </div>
-</main>
-  <button id="fetch-users">Fetch Users via AJAX</button>
-  <ul id="users"></ul>
+
+
 </body>
-
 </html>
