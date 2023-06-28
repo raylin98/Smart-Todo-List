@@ -5,6 +5,8 @@ CREATE TABLE tasks (
   category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE,
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   task_name TEXT NOT NULL,
+  task_description TEXT NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT NOW(),
   date_completed TIMESTAMP
 );
+
