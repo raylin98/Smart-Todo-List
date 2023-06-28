@@ -11,4 +11,7 @@ const getCategories = () => {
     })
 };
 
+
+
+
 module.exports = { getCategories };

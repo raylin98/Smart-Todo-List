@@ -24,7 +24,7 @@
      crossorigin="anonymous"
      referrerpolicy="no-referrer"
    />
-  <title>Users</title>
+  <title>Edit</title>
 
   <meta charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -46,7 +46,6 @@
       <div class="user-select">
         <span class="user">USER</span>
       </div>
-
     </div>
   </nav>
 
@@ -61,15 +60,27 @@
   </div>
   <div class="taskbox">
     <div class="box-1"> Categories
-      <span> Tasks</span>
+      <span> description</span>
     </div>
 
     <div class="box-2"> Descriptions
       <span> description</span>
     </div>
-
     <div class="box-3"> Icons
       <span> description</span>
+    </div>
+    <div class="box-4">
+      <form>
+        <label for="category">Change Category: </label>
+        <select>
+          <option value="eat">Eat</option>
+          <option value="watch">Watch</option>
+          <option value="read">Read</option>
+          <option value="buy">Buy</option>
+          <option value="other">Other</option>
+        </select>
+        <input type="submit">
+      </form>
     </div>
 <!--     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
  -->  </div>
@@ -77,4 +88,5 @@
   <button id="fetch-users">Fetch Users via AJAX</button>
   <ul id="users"></ul>
 </body>
+
 </html>

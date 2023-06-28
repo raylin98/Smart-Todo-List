@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home Page</title>
+  <title>Register</title>
   <!-- Nav CSS-->
   <link rel="stylesheet" href="styles/nav.css" type="text/css" />
 
@@ -44,26 +44,32 @@
     <div class="header">
       <span class='logo'>Smart Todo List</span>
       <div class="user-select">
-        <form action="/register" method="GET">
-          <input type="submit" value="Register" class="register-button">
+        <form action="/" method="GET">
+          <input type="submit" value="Login" class="register-button">
         </form>
-        <!--<span class="login">Login </span> !-->
-        <!-- <span class="register">Register</span> -->
-      </div>
     </div>
   </nav>
 
 
 <main class="container">
   <section class="form-class">
-  <form class="form-inline " id="login-form" method="POST" action="/tasks">
+  <form class="form-inline " action ="/tasks" method="POST">
+
     <div class="form-group mb-2 forms">
+      <label for="first-name" class="first-name"> First Name</label>
+       <input class="form-control first-name" type="name" name="first-name" placeholder="Enter First Name" />
+
+       <label for="last-name" class="last-name"> Last Name</label>
+       <input class="form-control last-name" type="name" name="last-name" placeholder="Enter Last Name" />
+
       <label for="email" class="e-mail"> E-mail Address</label>
        <input class="form-control e-mail" type="email" name="email" placeholder="Enter E-mail Address" />
         <label for="password" class="pw">Password</label>
+
         <input class="form-control pw" type="password" name="password" placeholder="Enter Password" />
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn">Register</button>
     </div>
+
   </form>
   </section>
   </main>

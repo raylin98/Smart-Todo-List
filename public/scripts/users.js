@@ -10,8 +10,9 @@ $(() => {
       $usersList.empty();
 
       for(const user of response.users) {
-        $(`<li class="user">`).text(user.name).appendTo($usersList);
+        $(`<li class="user">`).text(user.first_name).appendTo($usersList);
       }
     });
   });
 });
+
