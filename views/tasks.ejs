@@ -24,7 +24,7 @@
      crossorigin="anonymous"
      referrerpolicy="no-referrer"
    />
-  <title>Users</title>
+  <title>Tasks</title>
 
   <meta charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -37,8 +37,6 @@
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/users.js"></script>
-
-  <script src="/public/scripts/createTask.js"></script>
 </head>
 
 <body>
@@ -46,28 +44,40 @@
     <div class="header">
       <span class='logo'>Smart Todo List</span>
       <div class="user-select">
-        <span class="user">USER</span>
+        <span class="user">user</span>
       </div>
+
     </div>
   </nav>
 
-  <main class="container">
-    <section class="form-class">
-    <form id="add-task" class="form-inline add-task" action ="/tasks" method="POST">
 
-      <div class="form-group mb-2 forms">
-        <label for="task" class="add-task"> Add task</label>
-          <input name="task_name" class="task-input" type="task"  placeholder="Enter task">
-        <label for="task" class="add-task"> Add description</label>
-          <input name="task_description" class="task_description" type="task-description" placeholder="Enter description">
-        </div>
+<main class="container">
+  <div class="buttons">
+    <button type="button" class="fa-regular fa-flag"></button>
+    <button type="button" class="fa-solid fa-utensils"></button>
+    <button type="button" class="fa-solid fa-video"></button>
+    <button type="button" class="fa-solid fa-book"></button>
+    <button type="button" class="fa-solid fa-shopping-cart"></button>
+  </div>
+  <div class="taskbox">
+    <div class="box-1"> Categories
+      <span> Tasks</span>
+    </div>
 
-      </form>
-      <button type="submit" form="add-task">Submit</button>
+    <div class="box-2"> Descriptions
+      <span> description</span>
+    </div>
 
+    <div class="box-3"> Icons
+      <span> description</span>
+    </div>
+  </div>
+  <section class="task-display">
+    <p> hello</p>
 
-
-
+  </section>
+</main>
+  <button id="fetch-users">Fetch Users via AJAX</button>
+  <ul id="users"></ul>
 </body>
 </html>
-
