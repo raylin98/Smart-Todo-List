@@ -1,28 +1,18 @@
 const { pool } = require('workerpool');
 const db = require('../connection');
 
-// const addTask = (tasks) => {
-//   const newTask =[
-//     tasks.id,
-//     tasks.category_id,
-//     tasks.user_id,
-//     tasks.task_name,
-//     tasks.date_created,
-//     tasks.date_completed
-//   ];
 
-//   return db
-//   .query(`INSERT INTO tasks(id, category_id, user_id, task_name, date_created, date_completed)
-//   VALUES($1, $2, $3, $4, $5, $6)
-//   RETURNING *;`, newTask)
-//     .then(data => {
-//       console.log(data);
-//       return data.rows;
-//   })
-//   .catch((err)=> {
-//     console.log(err.message)
-//   });
-// };
+const getTasks = () => {
+  return db
+  .query(`SELECT * FROM task WHERE user_id =1;`)
+  .then(data => {
+    console.log(data.rows);
+    return data.rows;
+  })
+  .catch((err) => {
+    console.log(err.message);
+  })
+};
 
 const addTask = (tasks) => {
   const newTask =[
@@ -64,4 +54,4 @@ const createTask = function(tasks) {
 
 
 
-module.exports = {addTask, createTask}
+module.exports = {addTask, createTask, getTasks}
