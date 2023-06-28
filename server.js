@@ -40,15 +40,19 @@ app.use(express.static('public'));
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const userApiRoutes = require('./routes/users-api');
-const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
+const loginRoutes =require('./routes/login')
+
+const taskRoutes = require('./routes/tasks');
+//example user
+
+
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use('/api/users', userApiRoutes);
-app.use('/api/widgets', widgetApiRoutes);
-app.use('/users', usersRoutes);
+app.use('/tasks', taskRoutes);
 // Note: mount other resources here, using the same pattern above
 
 // Home page
@@ -59,19 +63,30 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/register', (req, res) => {
-  res.render('user-register')
-})
+// app.get('/users', (req, res) => {
+//   res.render('users');
+// });
 
-app.get('/edit', (req, res) => {
-  res.render('edit')
-})
+// app.post('/users', (req, res)=> {
+//  res.render('users');
+// })
 
-app.get('/add', (req, res) => {
-  res.render('add-task')
-})
+ app.get('/register', (req, res) => {
+   res.render('user-register')
+ })
+
+// app.get('/edit', (req, res) => {
+//   res.render('edit')
+// })
+
+// app.get('/add', (req, res) => {
+//   res.render('add-task')
+// })
+
+// app.get('/tasks', (req,res) => {
+//  res.render('tasks')
+// })
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
-
