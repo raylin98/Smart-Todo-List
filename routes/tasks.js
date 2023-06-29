@@ -12,13 +12,20 @@ router.get('/add', (req,res) => {
 });
 
 const config = new Configuration({
-  apiKey: "",
+  apiKey: "INSERT API KEY HERE",
 });
 
 const openai = new OpenAIApi(config);
-//prompt for ai to categorise userinput (wip)
+
 const runPrompt = async (taskName) => {
-  const prompt = `If you can categorise ${taskName} based on one of the following categories: 1. Eat, 2. Watch, 3. Read, 4. Buy, 5. Others, which would it be?`;
+  const prompt = `If you can categorize ${taskName} based on one of the following categories:
+  1. Eat
+  2. Watch
+  3. Read
+  4. Buy
+  5. Others
+
+Please enter the corresponding number (1-5) for the category that best fits the task.`;
 
   const response = await openai.createCompletion({
     model: "text-davinci-003",
@@ -38,21 +45,29 @@ router.post('/', async (req, res) => {
   taskData.date_created = date;
   console.log(taskData);
 
-  addTask(taskData)
-    .then((result) => {
-      console.log(result);
-      res.redirect('/tasks');
-    })
-    .catch(err => console.log(err));
-
   const userSubmission = taskData.task_name;
-  const category = await runPrompt(userSubmission);
+  let category;
+
+  try {
+    category = await runPrompt(userSubmission);
+    category = parseInt(category);
+
+    if (isNaN(category)) {
+      throw new Error("Invalid category ID received.");
+    }
+  } catch (error) {
+    console.error("Error categorizing task:", error);
+    category = null; // Set category to null if there's an error
+  }
+
+  if (category === null) {
+    category = 5; // Set category_id to 5 if category is null
+  }
 
   const formattedResponse = {
-    id: taskData.task,
-    category_id: taskData.category,
+    category_id: category,
     user_id: 1,
-    task_name: taskData.task.name,
+    task_name: taskData.task_name,
     task_description: taskData.task_description,
     date_created: new Date().toJSON(),
     date_completed: null,
@@ -61,8 +76,14 @@ router.post('/', async (req, res) => {
 
   console.log("Formatted Response:", formattedResponse);
 
-  // Perform further actions based on the categorized task
-  res.json(formattedResponse);
+  addTask(formattedResponse)
+    .then((result) => {
+      console.log(result);
+      res.redirect('/tasks');
+    })
+    .catch((err) => console.log(err));
 });
+
+
 
 module.exports = router;
