@@ -29,3 +29,19 @@ body {
   border: transparent;
   font-family: 'Roboto';
 }
+
+.user-select {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-task-button {
+  background-color: white;
+  border-color: transparent;
+}
+
+.home-page {
+  background-color: #ffffff;
+  border-color:transparent;
+}

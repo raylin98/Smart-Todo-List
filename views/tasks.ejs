@@ -42,9 +42,14 @@
 <body>
 <nav>
     <div class="header">
-      <span class='logo'>Smart Todo List</span>
+      <form action="/tasks" method="GET">
+        <input type="submit" value="Smart Todo List" class="home-page">
+      </form>
       <div class="user-select">
-        <span class="user">user</span>
+        <span class="user">USER</span>
+        <form action="/tasks/add" method="GET">
+          <input type="submit" value="Add Task" class="add-task-button">
+        </form>
       </div>
 
     </div>
