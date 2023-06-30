@@ -83,13 +83,19 @@
     <% if(tasks){ %>
       <ul>
       <% tasks.forEach(task => { %>
-        <li><%= tasks.task_name %></li>
+        <li>
+          <h3><%= task.task_name %>
+            (<%= task.category_name %>)
+          </h3>
+          <p>
+            <%= task.task_description %>
+          </p>
+          <a href="/edit/<%= task.task_id %>">Edit</a>
+        </li>
       <% }); %>
     </ul>
     <% } %>
   </section>
 </main>
-  <button id="fetch-users">Fetch Users via AJAX</button>
-  <ul id="users"></ul>
 </body>
 </html>

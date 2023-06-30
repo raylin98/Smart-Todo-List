@@ -4,10 +4,10 @@ const { addTask } = require('../db/queries/tasks');
 const { getTasks } = require('../db/queries/tasks');
 const { Configuration, OpenAIApi } = require("openai");
 
-router.get('/', (req, res) => {
+/* router.get('/', (req, res) => {
   // still looks for task key if undefined from ejs
   res.render('tasks', {tasks:undefined});
-});
+}); */
 
 /** ============   TASKS ROUTES    =============================== */
 /** ----- GET /Tasks  ----- */
@@ -16,8 +16,8 @@ router.get('/', (req, res) => {
      *  - ERROR: send a message if the user is not logged in
      *  - REDIRECTS: to /TASKS_INDEX tasks index page and renders if user is logged in
      */
-router.get('/tasks', (req, res) => {
-getTasks(formattedResponse)
+router.get('/', (req, res) => {
+getTasks()
 .then((result) => {
   const templateVars = {
     tasks:result
@@ -35,7 +35,7 @@ router.get('/add', (req,res) => {
 });
 
 const config = new Configuration({
-  apiKey: "INSERT API KEY HERE",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(config);
