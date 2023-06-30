@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { addTask } = require('../db/queries/tasks');
-const { getTasks } = require('../db/queries/tasks');
+
+const { addTask, getTasks } = require('../db/queries/tasks');
 const { Configuration, OpenAIApi } = require("openai");
 const { getCategories } = require('../db/queries/categories');
 
@@ -125,6 +125,5 @@ router.post('/:id', (req, res) => {
     .catch((err) => console.log(err));
 
 });
-
 
 module.exports = router;
