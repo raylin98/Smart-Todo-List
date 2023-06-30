@@ -29,7 +29,7 @@ getTasks(formattedResponse)
   console.log("here")
 });
 
-/*
+
 router.get('/add', (req,res) => {
   res.render('add-task');
 });
@@ -106,6 +106,7 @@ router.post('/', async (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+
 
 
 
