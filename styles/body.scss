@@ -90,7 +90,7 @@
 }
 
 
-@media only screen and (min-width:992px) {
+@media only screen and (max-width:992px) {
   .container {
     display: flex;
     align-items:center;
@@ -118,23 +118,23 @@
   }
 
   .task-input {
-  display:flex;
-  margin-top:1em;
-  margin-bottom:1em;
-}
+    display:flex;
+    margin-top:1em;
+    margin-bottom:1em;
+  }
 
-.add-task {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .add-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .box-1, .box-2, .box-3, .box-4 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1em;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+  }
   .taskbox {
     display: flex;
     justify-content: space-around;
@@ -148,4 +148,4 @@
     font-family: 'Roboto', sans-serif;
   }
 }
-}
+
