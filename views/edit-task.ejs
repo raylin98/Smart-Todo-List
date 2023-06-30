@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Nav CSS-->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+  <!-- Body CSS-->
+  <link rel="stylesheet" href="/styles/body.css" type="text/css" />
+
+  <!-- Button CSS-->
+  <link rel="stylesheet" href="/styles/button.css" type="text/css" />
+
+  <!-- Google Roboto Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Lib CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Edit Category</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/users.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="header">
+      <form action="/tasks/<%=id%>" method="GET">
+        <input type="submit" value="Smart Todo List" class="home-page">
+      </form>
+      <div class="user-select">
+        <span class="user">USER</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <%- include partials/_edit-category.ejs %> -->
+
+  <main class="container">
+    <section class="form-class">
+      <form id="edit-task" class="form-inline edit-task" action="/tasks/<%=id%>" method="POST">
+
+
+        <label for="category-select">Choose a category:</label>
+        <select name="category" id="category-select">
+          <option value="">--Please choose an option--</option>
+          <% for (let category of categories) { %>
+            <option value=<%=category.category_name%>>
+              <%=category.category_name%>
+            </option>
+            <% } %>
+
+        </select>
+        <button type="submit" form="edit-task" class="button-submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

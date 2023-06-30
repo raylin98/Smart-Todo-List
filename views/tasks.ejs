@@ -16,14 +16,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
-     <!-- Font Awesome Lib CDN-->
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-     crossorigin="anonymous"
-     referrerpolicy="no-referrer"
-   />
+    <!-- Font Awesome Lib CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   <title>Tasks</title>
 
   <meta charset="UTF-8" >
@@ -79,10 +79,23 @@
   </div>
   <section class="task-display">
     <p> hello</p>
-
+    <!-- checks if task is defined if undefined skip  -->
+    <% if(tasks){ %>
+      <ul>
+      <% tasks.forEach(task => { %>
+        <li>
+          <h3><%= task.task_name %>
+            (<%= task.category_name %>)
+          </h3>
+          <p>
+            <%= task.task_description %>
+          </p>
+          <a href="/edit/<%= task.task_id %>">Edit</a>
+        </li>
+      <% }); %>
+    </ul>
+    <% } %>
   </section>
 </main>
-  <button id="fetch-users">Fetch Users via AJAX</button>
-  <ul id="users"></ul>
 </body>
 </html>

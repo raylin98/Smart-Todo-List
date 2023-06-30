@@ -2,7 +2,7 @@ const db = require('../connection');
 
 const getTasks = () => {
   return db
-  .query(`SELECT * FROM tasks WHERE user_id =1;`)
+  .query(`SELECT tasks.*, categories.category_name FROM tasks JOIN categories ON tasks.category_id = categories.id WHERE user_id =1;`)
   .then(data => {
     console.log(data.rows);
     return data.rows;
@@ -13,7 +13,7 @@ const getTasks = () => {
 };
 
 const addTask = (tasks) => {
-  const newTask =[
+  const newTask = [
     tasks.category_id,
     tasks.user_id,
     tasks.task_name,
@@ -23,16 +23,16 @@ const addTask = (tasks) => {
   ];
 
   return db
-  .query(`INSERT INTO tasks(category_id, user_id, task_name, task_description, date_created, date_completed)
+    .query(`INSERT INTO tasks(category_id, user_id, task_name, task_description, date_created, date_completed)
   VALUES($1, $2, $3, $4, $5, $6)
   RETURNING *;`, newTask)
     .then(data => {
       console.log(data.rows[0]);
       return data.rows[0];
-  })
-  .catch((err)=> {
-    console.log(err.message)
-  });
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
 };
 
 const createTask = function(tasks) {
@@ -51,6 +51,17 @@ const createTask = function(tasks) {
   </div>`);
 };
 
+const updateTask = function(body, id) {
+  return db
+    .query(`UPDATE tasks SET category = $1 WHERE id = $2 RETURNING *;`, [body.category, id])
+    .then(data => {
+      console.log(data.rows[0]);
+      return data.rows[0];
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
+};
 
 
-module.exports = {addTask, createTask, getTasks}
+module.exports = { addTask, createTask, getTasks, updateTask };

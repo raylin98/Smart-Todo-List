@@ -1,18 +1,50 @@
 const express = require('express');
 const router = express.Router();
+
 const { addTask, getTasks } = require('../db/queries/tasks');
 const { Configuration, OpenAIApi } = require("openai");
+const { getCategories } = require('../db/queries/categories');
 
+
+/* router.get('/', (req, res) => {
+  // still looks for task key if undefined from ejs
+  res.render('tasks', {tasks:undefined});
+}); */
+
+/** ============   TASKS ROUTES    =============================== */
+/** ----- GET /Tasks  ----- */
+    /**   "/TASKS"    GET:  DISPLAYS TASK: Gets tasks of current user
+     *       - current user is user_id stored in session cookie user in user object
+     *  - ERROR: send a message if the user is not logged in
+     *  - REDIRECTS: to /TASKS_INDEX tasks index page and renders if user is logged in
+     */
 router.get('/', (req, res) => {
-  res.render('tasks');
+getTasks()
+.then((result) => {
+  const templateVars = {
+    tasks:result
+  }
+  console.log("tasks being logged", result);
+  res.render('tasks', templateVars);
+  })
+  .catch((err) => console.log(err));
+  console.log("here")
 });
 
-router.get('/add', (req,res) => {
+router.get('/:id', (req, res) => {
+  getCategories().then(data => {
+    res.render('edit-task', { categories: data, id: req.params.id });
+  });
+
+
+});
+
+router.get('/add', (req, res) => {
   res.render('add-task');
 });
 
 const config = new Configuration({
-  apiKey: "INSERT API KEY HERE",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(config);
@@ -82,6 +114,16 @@ router.post('/', async (req, res) => {
       res.redirect('/tasks');
     })
     .catch((err) => console.log(err));
+});
+
+router.post('/:id', (req, res) => {
+  updateTask(req.body, req.params.id)
+    .then((result) => {
+      console.log(result);
+      res.redirect('/tasks');
+    })
+    .catch((err) => console.log(err));
+
 });
 
 module.exports = router;
