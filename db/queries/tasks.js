@@ -2,7 +2,7 @@ const db = require('../connection');
 
 const getTasks = () => {
   return db
-  .query(`SELECT tasks.*, categories.category_name FROM tasks JOIN categories ON tasks.category_id = categories.id WHERE user_id =1;`)
+  .query(`SELECT tasks.*, categories.category_name FROM tasks JOIN categories ON tasks.category_id = categories.id WHERE user_id =1 ORDER BY tasks.task_name;`)
   .then(data => {
     console.log(data.rows);
     return data.rows;
@@ -53,7 +53,7 @@ const createTask = function(tasks) {
 
 const updateTask = function(body, id) {
   return db
-    .query(`UPDATE tasks SET category = $1 WHERE id = $2 RETURNING *;`, [body.category, id])
+    .query(`UPDATE tasks SET category_id = $1 WHERE id = $2 RETURNING *;`, [body.category, id])
     .then(data => {
       console.log(data.rows[0]);
       return data.rows[0];

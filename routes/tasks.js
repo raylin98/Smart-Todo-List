@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { addTask, getTasks } = require('../db/queries/tasks');
+const { addTask, getTasks, updateTask } = require('../db/queries/tasks');
 const { Configuration, OpenAIApi } = require("openai");
 const { getCategories } = require('../db/queries/categories');
 
@@ -31,12 +31,10 @@ getTasks()
   console.log("here")
 });
 
-router.get('/:id', (req, res) => {
+router.get('/edit/:id', (req, res) => {
   getCategories().then(data => {
     res.render('edit-task', { categories: data, id: req.params.id });
   });
-
-
 });
 
 router.get('/add', (req, res) => {
