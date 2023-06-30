@@ -42,8 +42,8 @@ app.use(express.static('public'));
 const userApiRoutes = require('./routes/users-api');
 const usersRoutes = require('./routes/users');
 const loginRoutes =require('./routes/login')
-
 const taskRoutes = require('./routes/tasks');
+
 //example user
 
 
@@ -53,6 +53,7 @@ const taskRoutes = require('./routes/tasks');
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use('/api/users', userApiRoutes);
 app.use('/tasks', taskRoutes);
+
 // Note: mount other resources here, using the same pattern above
 
 // Home page

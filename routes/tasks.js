@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { addTask } = require('../db/queries/tasks');
+const { addTask, getTasks } = require('../db/queries/tasks');
 const { Configuration, OpenAIApi } = require("openai");
 
 router.get('/', (req, res) => {
@@ -83,7 +83,5 @@ router.post('/', async (req, res) => {
     })
     .catch((err) => console.log(err));
 });
-
-
 
 module.exports = router;

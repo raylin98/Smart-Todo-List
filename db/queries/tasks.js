@@ -1,4 +1,3 @@
-const { pool } = require('workerpool');
 const db = require('../connection');
 
 const getTasks = () => {
