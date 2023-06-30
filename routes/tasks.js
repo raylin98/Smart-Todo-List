@@ -1,11 +1,34 @@
 const express = require('express');
 const router = express.Router();
 const { addTask } = require('../db/queries/tasks');
+const { getTasks } = require('../db/queries/tasks');
 const { Configuration, OpenAIApi } = require("openai");
 
 router.get('/', (req, res) => {
-  res.render('tasks');
+  // still looks for task key if undefined from ejs
+  res.render('tasks', {tasks:undefined});
 });
+
+/** ============   TASKS ROUTES    =============================== */
+/** ----- GET /Tasks  ----- */
+    /**   "/TASKS"    GET:  DISPLAYS TASK: Gets tasks of current user
+     *       - current user is user_id stored in session cookie user in user object
+     *  - ERROR: send a message if the user is not logged in
+     *  - REDIRECTS: to /TASKS_INDEX tasks index page and renders if user is logged in
+     */
+router.get('/tasks', (req, res) => {
+getTasks(formattedResponse)
+.then((result) => {
+  const templateVars = {
+    tasks:result
+  }
+  console.log("tasks being logged", result);
+  res.render('tasks', templateVars);
+  })
+  .catch((err) => console.log(err));
+  console.log("here")
+});
+
 
 router.get('/add', (req,res) => {
   res.render('add-task');
@@ -83,6 +106,7 @@ router.post('/', async (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+
 
 
 
