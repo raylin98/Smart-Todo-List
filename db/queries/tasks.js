@@ -3,14 +3,14 @@ const db = require('../connection');
 
 const getTasks = () => {
   return db
-    .query(`SELECT * FROM tasks WHERE user_id =1;`)
-    .then(data => {
-      console.log(data.rows);
-      return data.rows;
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
+  .query(`SELECT tasks.*, categories.category_name FROM tasks JOIN categories ON tasks.category_id = categories.id WHERE user_id =1;`)
+  .then(data => {
+    console.log(data.rows);
+    return data.rows;
+  })
+  .catch((err) => {
+    console.log(err.message);
+  })
 };
 
 const addTask = (tasks) => {
