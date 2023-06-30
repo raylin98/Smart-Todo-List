@@ -6,7 +6,7 @@ const getTasks = () => {
   .query(`SELECT * FROM tasks WHERE user_id =1;`)
   .then(data => {
     console.log(data.rows);
-    return data.rows;
+    return data.rows; 
   })
   .catch((err) => {
     console.log(err.message);
