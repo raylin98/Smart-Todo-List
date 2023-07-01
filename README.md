@@ -48,27 +48,37 @@ Once that is set up, users can utilize the app to its fullest!
 
 # Images
 ## Desktop View:
-![Desktop-View of Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view.png)
 Desktop View of Login Page
-![Desktop-View of Register Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view-register.png)
+![Desktop-View of Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view.png)
+
 Desktop View of Register Page
-![Desktop-View of Post Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view-register.png)
+![Desktop-View of Register Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view-register.png)
+
 Desktop View of Post-Login Page
-![Desktop-View of Add-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view-post-login.png)
+![Desktop-View of Post Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view-register.png)
+
 Desktop View of Add-Task Page
-![Desktop-View of Edit-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view-edit.png)
+![Desktop-View of Add-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view-post-login.png)
+
 Desktop View of Edit-Task Page
+![Desktop-View of Edit-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/desktop-view-edit.png)
+
+
 ## Mobile View:
-![Mobile-View of Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-login.png)
 Mobile View of Login Page 
-![Mobile-View of Register Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-register.png)
+![Mobile-View of Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-login.png)
+
 Mobile View of Register Page
-![Mobile-View of Post-Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-post-login.png)
+![Mobile-View of Register Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-register.png)
+
 Mobile View of Post-Login Page
-![Mobile-View of Add-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-add-task.png)
+![Mobile-View of Post-Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-post-login.png)
+
 Mobile View of Add-Task Page
-![Mobile-View of Edit-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-edit.png)
+![Mobile-View of Add-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-add-task.png)
+
 Mobile View of Edit-Task Page
+![Mobile-View of Edit-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-edit.png)
 
 # Future Implementations
 - Filter Option based on the Task Icons that are present in the Tasks Page.
