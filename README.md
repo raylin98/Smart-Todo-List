@@ -66,18 +66,23 @@ Desktop View of Edit-Task Page
 
 ## Mobile View:
 Mobile View of Login Page 
+
 ![Mobile-View of Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-login.png)
 
 Mobile View of Register Page
+
 ![Mobile-View of Register Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-register.png)
 
 Mobile View of Post-Login Page
+
 ![Mobile-View of Post-Login Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-post-login.png)
 
 Mobile View of Add-Task Page
+
 ![Mobile-View of Add-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-add-task.png)
 
 Mobile View of Edit-Task Page
+
 ![Mobile-View of Edit-Task Page](https://github.com/raylin98/Smart-Todo-List/blob/master/Planning/Photo/mobile-view-edit.png)
 
 # Future Implementations
