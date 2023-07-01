@@ -38,7 +38,7 @@
 <body>
   <nav>
     <div class="header">
-      <form action="/tasks/<%=id%>" method="GET">
+      <form action="/tasks" method="GET">
         <input type="submit" value="Smart Todo List" class="home-page">
       </form>
       <div class="user-select">
@@ -52,8 +52,7 @@
   <main class="container">
     <section class="form-class">
       <form id="edit-task" class="form-inline edit-task" action="/tasks/<%=id%>" method="POST">
-
-
+        <div class="form-group mb-2 forms">
         <label for="category-select">Choose a category:</label>
         <select name="category" id="category-select">
           <option value="">--Please choose an option--</option>
@@ -62,10 +61,9 @@
               <%=category.category_name%>
             </option>
             <% } %>
-
         </select>
-        <button type="submit" form="edit-task" class="button-submit">Submit</button>
-        </div>
+          <button type="submit" form="edit-task" class="button-submit">Submit</button>
+      </div>
       </form>
     </section>
   </main>

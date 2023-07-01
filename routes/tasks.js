@@ -42,7 +42,7 @@ router.get('/add', (req, res) => {
 });
 
 const config = new Configuration({
-  apiKey: "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",
+  apiKey: "INSERT API KEY HERE",
 });
 
 const openai = new OpenAIApi(config);

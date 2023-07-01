@@ -9,6 +9,7 @@
   padding-left: 3em;
   padding-right: 3em;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 2em;
 }
 
 
@@ -90,7 +91,7 @@
 }
 
 
-@media only screen and (max-width:992px) {
+@media only screen and (min-width:992px) {
   .container {
     display: flex;
     align-items:center;
@@ -110,13 +111,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: left 20em;
+    margin: right 20em;
   }
 
   .taskbox {
     display: flex;
     width:90%
   }
-
+  .list {
+    display: flex;
+  }
   .task-input {
     display:flex;
     margin-top:1em;
@@ -146,6 +151,17 @@
     padding-left: 3em;
     padding-right: 3em;
     font-family: 'Roboto', sans-serif;
+  }
+  .list {
+    display: flex;
+    margin-left: 20em;
+    margin-right: 20em;
+    margin-bottom: 5em;
+  }
+
+  .form-class {
+    display: flex;
+    font-family:'Roboto'
   }
 }
 
