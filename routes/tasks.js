@@ -5,19 +5,6 @@ const { addTask, getTasks, updateTask } = require('../db/queries/tasks');
 const { Configuration, OpenAIApi } = require("openai");
 const { getCategories } = require('../db/queries/categories');
 
-
-/* router.get('/', (req, res) => {
-  // still looks for task key if undefined from ejs
-  res.render('tasks', {tasks:undefined});
-}); */
-
-/** ============   TASKS ROUTES    =============================== */
-/** ----- GET /Tasks  ----- */
-    /**   "/TASKS"    GET:  DISPLAYS TASK: Gets tasks of current user
-     *       - current user is user_id stored in session cookie user in user object
-     *  - ERROR: send a message if the user is not logged in
-     *  - REDIRECTS: to /TASKS_INDEX tasks index page and renders if user is logged in
-     */
 router.get('/', (req, res) => {
 getTasks()
 .then((result) => {
